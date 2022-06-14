@@ -15,7 +15,15 @@ const Header = () => {
           <h1 className="header">Space Traveler&apos; Hub</h1>
         </div>
         <ul className="list-container">
-          <li>Rockets</li>
+          <li>
+            <NavLink
+              to="/"
+              className="rockets"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Rockes
+            </NavLink>
+          </li>
           <li>Missions</li>
           <li>
             <NavLink
