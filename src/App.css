@@ -127,58 +127,58 @@ nav {
 /* Mission Styling */
 
 tr {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 .missions-container {
-	margin: 1rem 2rem;
-	border-collapse: collapse;
+  margin: 1rem 2rem;
+  border-collapse: collapse;
 }
 
 .missions-container tr {
-	transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .mission-container .mission-name {
-	font-weight: bold;
+  font-weight: bold;
 }
 
 .missions-container tr:nth-child(odd) {
-	background-color: var(--white-2);
+  background-color: var(--white-2);
 }
 
 .missions-container tr:hover {
-	background-color: #ddd;
+  background-color: #ddd;
 }
 
 .missions-container th,
 .missions-container td {
-	border: 1px solid rgb(196, 195, 195);
-	padding: 0.8rem;
+  border: 1px solid rgb(196, 195, 195);
+  padding: 0.8rem;
 }
 
 .missions-container th {
-	background-color: var(--white);
+  background-color: var(--white);
 }
 
 .mission-container .active-member {
-	background-color: rgb(27, 163, 151);
-	color: var(--white);
-	padding: 0.15rem;
-	border-radius: 0.2rem;
-	display: block;
-	margin: auto;
-	width: 65%;
-	text-align: center;
+  background-color: rgb(27, 163, 151);
+  color: var(--white);
+  padding: 0.15rem;
+  border-radius: 0.2rem;
+  display: block;
+  margin: auto;
+  width: 65%;
+  text-align: center;
 }
 
 .mission-container .not-member {
-	background-color: rgb(102, 104, 104);
-	color: var(--white);
-	padding: 0.15rem;
-	border-radius: 0.2rem;
-	display: block;
-	margin: auto;
-	width: 70%;
-	text-align: center;
+  background-color: rgb(102, 104, 104);
+  color: var(--white);
+  padding: 0.15rem;
+  border-radius: 0.2rem;
+  display: block;
+  margin: auto;
+  width: 70%;
+  text-align: center;
 }
