@@ -24,7 +24,14 @@ const Header = () => {
               Rockes
             </NavLink>
           </li>
-          <li>Missions</li>
+          <li>
+            <NavLink
+              to="/missions"
+              style={({ isActive }) => (isActive ? activeStyle : undefined)}
+            >
+              Missions
+            </NavLink>
+          </li>
           <li>
             <NavLink
               to="/myprofile"
