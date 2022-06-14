@@ -1,10 +1,17 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 import logo from '../assets/planet.png';
+import { fetchMissionData } from '../redux/missions/MissionsReducer';
 
 const Header = () => {
   const activeStyle = {
     textDecoration: 'underline',
+  };
+
+  const dispatch = useDispatch();
+  const fetchMissions = () => {
+    dispatch(fetchMissionData());
   };
 
   return (
@@ -28,6 +35,7 @@ const Header = () => {
             <NavLink
               to="/missions"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
+              onClick={fetchMissions}
             >
               Missions
             </NavLink>
