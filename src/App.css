@@ -1,184 +1,210 @@
 * {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  text-decoration: none;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	box-sizing: border-box;
+	color: #333;
 }
 
 :root {
-  --blue: #0290ff;
-  --blue2: #0150ff;
-  --gray: #ddd;
-  --turquoise: #00cbb9;
-  --white: #fff;
-  --white-2: #f2f2f2;
+	--blue: #0290ff;
+	--blue2: #0150ff;
+	--gray: #ddd;
+	--turquoise: #00cbb9;
+	--white: #fff;
+	--white-2: #f2f2f2;
 }
 
 /* Navbar Styling */
 nav {
-  display: flex;
-  justify-content: space-between;
-  padding: 1rem 5%;
-  align-items: center;
+	display: flex;
+	justify-content: space-between;
+	padding: 1rem 5%;
+	align-items: center;
 }
 
 .title-container {
-  display: flex;
-  gap: 1rem;
-  align-items: center;
+	display: flex;
+	gap: 1rem;
+	align-items: center;
 }
 
 .title-container .logo {
-  width: 3rem;
-  cursor: pointer;
-  animation: float 2.5s linear infinite;
-  margin-right: 0.2rem;
+	width: 3rem;
+	cursor: pointer;
+	animation: float 2.5s linear infinite;
+	margin-right: 0.2rem;
 }
 
 @keyframes float {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
+	0%,
+	100% {
+		transform: translateY(0);
+	}
 
-  50% {
-    transform: translateY(1rem);
-  }
+	50% {
+		transform: translateY(1rem);
+	}
 }
 
 .list-container {
-  display: flex;
-  gap: 1rem;
+	display: flex;
+	gap: 1rem;
 }
 
 .list-container a {
-  color: var(--blue);
+	color: var(--blue);
 }
 
 .list-container .profile {
-  border-left: 1px solid #333;
-  padding-left: 1rem;
+	border-left: 1px solid #333;
+	padding-left: 1rem;
 }
 
 .line {
-  margin: 0 1.5rem;
+	margin: 0 1.5rem;
 }
 
 /* Rocket Styling */
 .rocket-container {
-  display: flex;
-  margin: 2rem;
+	display: flex;
+	margin: 2rem;
 }
 
 .rocket-container .rocket-image {
-  display: block;
-  width: 18rem;
-  margin-right: 1rem;
+	display: block;
+	width: 18rem;
+	margin-right: 1rem;
 }
 
 .rocket-container .name,
 .rocket-container .description {
-  margin: 0 1rem;
+	margin: 0 1rem;
 }
 
 .rocket-container .reserve-btn {
-  margin: 0.5rem 0;
-  background-color: var(--blue);
-  color: var(--white);
-  border: none;
-  cursor: pointer;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  transition: all 0.3s ease-in-out;
-  font-size: 15px;
+	margin: 0.5rem 0;
+	background-color: var(--blue);
+	color: var(--white);
+	border: none;
+	cursor: pointer;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	transition: all 0.3s ease-in-out;
+	font-size: 15px;
 }
 
 .rocket-container .reserve-btn:hover {
-  background-color: var(--blue2);
+	background-color: var(--blue2);
 }
 
 .rocket-container .cancel-btn {
-  margin-left: 1rem;
-  margin-top: 0.5rem;
-  background-color: var(--white);
-  color: gray;
-  border: 1px solid #333;
-  padding: 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-  font-size: 15px;
+	margin-left: 1rem;
+	margin-top: 0.5rem;
+	background-color: var(--white);
+	color: gray;
+	border: 1px solid #333;
+	padding: 1rem;
+	border-radius: 0.5rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+	font-size: 15px;
 }
 
 .rocket-container .cancel-btn:hover {
-  background-color: var(--gray);
-  color: var(--white);
+	background-color: var(--gray);
+	color: var(--white);
 }
 
 .rocket-container .span {
-  background-color: var(--turquoise);
-  color: var(--white);
-  border-radius: 6px;
-  padding: 0.1rem 0.5rem;
-  margin-right: 0.5rem;
+	background-color: var(--turquoise);
+	color: var(--white);
+	border-radius: 6px;
+	padding: 0.1rem 0.5rem;
+	margin-right: 0.5rem;
 }
 
 /* Mission Styling */
 
 tr {
-  cursor: pointer;
+	cursor: pointer;
 }
 
 .missions-container {
-  margin: 1rem 2rem;
-  border-collapse: collapse;
+	margin: 1rem 2rem;
+	border-collapse: collapse;
 }
 
 .missions-container tr {
-  transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
 }
 
 .mission-container .mission-name {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .missions-container tr:nth-child(odd) {
-  background-color: var(--white-2);
+	background-color: var(--white-2);
 }
 
 .missions-container tr:hover {
-  background-color: #ddd;
+	background-color: #ddd;
 }
 
 .missions-container th,
 .missions-container td {
-  border: 1px solid rgb(196, 195, 195);
-  padding: 0.8rem;
+	border: 1px solid rgb(196, 195, 195);
+	padding: 0.8rem;
 }
 
 .missions-container th {
-  background-color: var(--white);
+	background-color: var(--white);
 }
 
 .mission-container .active-member {
-  background-color: rgb(27, 163, 151);
-  color: var(--white);
-  padding: 0.15rem;
-  border-radius: 0.2rem;
-  display: block;
-  margin: auto;
-  width: 65%;
-  text-align: center;
+	background-color: rgb(27, 163, 151);
+	color: var(--white);
+	padding: 0.15rem;
+	border-radius: 0.2rem;
+	display: block;
+	margin: auto;
+	width: 65%;
+	text-align: center;
 }
 
 .mission-container .not-member {
-  background-color: rgb(102, 104, 104);
-  color: var(--white);
-  padding: 0.15rem;
-  border-radius: 0.2rem;
-  display: block;
-  margin: auto;
-  width: 70%;
-  text-align: center;
+	background-color: rgb(102, 104, 104);
+	color: var(--white);
+	padding: 0.15rem;
+	border-radius: 0.2rem;
+	display: block;
+	margin: auto;
+	width: 70%;
+	text-align: center;
+}
+
+/* Profile Styling */
+.profile-container {
+	display: flex;
+	justify-content: space-around;
+}
+
+.profile-container .rockets-profile {
+	width: 40%;
+	margin: 2rem;
+}
+
+.profile-container .title {
+	padding: 1rem;
+}
+
+.profile-container .rockets {
+	border: 1px solid var(--gray);
+	border-radius: 5px;
+}
+
+.profile-container .rockets-li {
+	padding: 1rem;
+	border-bottom: 1px solid var(--gray);
 }
