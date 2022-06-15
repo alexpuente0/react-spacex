@@ -1,6 +1,7 @@
 /* eslint-disable */
 //Action Types
 const GET_ROCKETS = "GET_ROCKETS";
+const RESERVE_ROCKET = "RESERVE_ROCKET";
 //URL
 const URL = "https://api.spacexdata.com/v3/rockets";
 //Action Creators
@@ -9,12 +10,26 @@ export const rocketsData = (payload) => ({
 	payload,
 });
 
+export const reserveRocket = (id) => ({
+	type: RESERVE_ROCKET,
+	id,
+});
+
 //Reducer
 const initialState = [];
 export const rocketsReducer = (state = initialState, action) => {
 	switch (action.type) {
 		case GET_ROCKETS:
 			return action.payload;
+
+		case RESERVE_ROCKET:
+			return state.map((rocket) => {
+				if (rocket.id !== action.id) {
+					return rocket;
+				}
+				return { ...rocket, reserved: true };
+			});
+
 		default:
 			return state;
 	}
