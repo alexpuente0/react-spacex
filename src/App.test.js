@@ -60,3 +60,4 @@ describe('Pages are rendered correctly', () => {
     expect(element).toMatchSnapshot();
   });
 });
+
