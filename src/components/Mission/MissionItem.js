@@ -16,8 +16,11 @@ const MissionItem = ({ id, mission, description, reserved }) => {
       <td className="mission-name">{mission}</td>
       <td>{description}</td>
       <td className="mission">
-        <span className="active-member">Active Member</span>
-        <span className="not-member">NOT A MEMBER</span>
+        {reserved ? (
+          <span className="active-member">ACTIVE MEMBER</span>
+        ) : (
+          <span className="not-member">NOT A MEMBER</span>
+        )}
       </td>
       <td className="join-mission">
         <button
@@ -25,8 +28,8 @@ const MissionItem = ({ id, mission, description, reserved }) => {
           className={id}
           onClick={handleJoinMission}
           style={{
-            color: "black",
-            border: "2px solid black",
+            color: reserved ? "red" : "black",
+            border: reserved ? "2px solid red" : "2px solid black",
             borderRadius: "0.2rem",
             fontWeight: "transparent",
             padding: "0.20rem",
@@ -34,13 +37,12 @@ const MissionItem = ({ id, mission, description, reserved }) => {
             margin: "auto",
           }}
         >
-          Join Mission
+          {reserved ? "Leave Mission" : "Join Mission"}
         </button>
       </td>
     </tr>
   );
 };
-
 MissionItem.propTypes = {
   id: PropTypes.string.isRequired,
   mission: PropTypes.string.isRequired,
