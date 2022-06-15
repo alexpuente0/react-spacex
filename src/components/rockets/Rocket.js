@@ -6,22 +6,25 @@ import {
 	reserveRocket,
 	removeReservation,
 } from "../../redux/rockets/RocketReducer";
+import { toast } from "react-toastify";
 
 const Rocket = ({ id, image, name, description, reserved }) => {
 	const dispatch = useDispatch();
 
 	const reserveShip = () => {
 		dispatch(reserveRocket(id));
+		toast.success("Your Ship was reserved successfully!");
 	};
 
 	const cancelReservation = () => {
 		dispatch(removeReservation(id));
+		toast.success("Your Reservation was canceled successfully!");
 	};
 
 	return (
 		<div className="rocket-container" id={id}>
 			<img src={image} alt="rocket" className="rocket-image" />
-			<div>
+			<div className="content">
 				<h2 className="name">{name}</h2>
 				<p className="description">
 					{reserved && <span className="span">Reserved</span>}

@@ -3,12 +3,18 @@ import PropTypes from "prop-types";
 import React from "react";
 import { useDispatch } from "react-redux";
 import { joinMission } from "../../redux/missions/MissionsReducer";
+import { toast } from "react-toastify";
 
 const MissionItem = ({ id, mission, description, reserved }) => {
 	const dispatch = useDispatch();
 	const handleJoinMission = (e) => {
 		const missionId = e.target.className;
 		dispatch(joinMission(missionId));
+		if (!reserved) {
+			toast.success("You just joined a mission successfully!");
+		} else {
+			toast.success("You just left a mission successfully!");
+		}
 	};
 
 	return (
@@ -35,6 +41,7 @@ const MissionItem = ({ id, mission, description, reserved }) => {
 						padding: "0.20rem",
 						display: "block",
 						margin: "auto",
+						cursor: "pointer",
 					}}
 				>
 					{reserved ? "Leave Mission" : "Join Mission"}

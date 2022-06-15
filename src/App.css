@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 * {
 	margin: 0;
 	padding: 0;
@@ -5,6 +7,9 @@
 	text-decoration: none;
 	box-sizing: border-box;
 	color: #333;
+	font-family: "Roboto", sans-serif;
+	line-height: 1.5;
+	transition: all 0.2s linear;
 }
 
 :root {
@@ -207,4 +212,43 @@ tr {
 .profile-container .rockets-li {
 	padding: 1rem;
 	border-bottom: 1px solid var(--gray);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+	nav {
+		flex-direction: column;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.title-container .header {
+		font-size: 28px;
+	}
+
+	.list-container {
+		margin-top: 1.5rem;
+	}
+
+	.list-container a {
+		font-size: 18px;
+	}
+
+	.rocket-container {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.rocket-container .rocket-image {
+		width: 23rem;
+	}
+
+	.rocket-container .content {
+		text-align: center;
+	}
+
+	.rocket-container .name {
+		margin-top: 0.5rem;
+	}
 }
