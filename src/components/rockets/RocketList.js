@@ -10,8 +10,10 @@ const Rockets = () => {
 
 	useEffect(() => {
 		async function getData() {
-			const data = await getRockets();
-			dispatch(rocketsData(data));
+			if (rocketState.length === 0) {
+				const data = await getRockets();
+				dispatch(rocketsData(data));
+			}
 		}
 		getData();
 	}, []);
