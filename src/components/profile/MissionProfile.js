@@ -1,6 +1,6 @@
 /* eslint-disable */
 import React from "react";
 
-export const MissionProfile = () => {
-	return <div>MissionProfile</div>;
-};
+const MissionProfile = ({ name }) => <div className="rockets-li">{name}</div>;
+
+export default MissionProfile
