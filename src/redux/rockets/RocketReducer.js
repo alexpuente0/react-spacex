@@ -2,6 +2,7 @@
 //Action Types
 const GET_ROCKETS = "GET_ROCKETS";
 const RESERVE_ROCKET = "RESERVE_ROCKET";
+const REMOVE_RESERVATION = "REMOVE_RESERVATION";
 //URL
 const URL = "https://api.spacexdata.com/v3/rockets";
 //Action Creators
@@ -12,6 +13,11 @@ export const rocketsData = (payload) => ({
 
 export const reserveRocket = (id) => ({
 	type: RESERVE_ROCKET,
+	id,
+});
+
+export const removeReservation = (id) => ({
+	type: REMOVE_RESERVATION,
 	id,
 });
 
@@ -28,6 +34,14 @@ export const rocketsReducer = (state = initialState, action) => {
 					return rocket;
 				}
 				return { ...rocket, reserved: true };
+			});
+
+		case REMOVE_RESERVATION:
+			return state.map((rocket) => {
+				if (rocket.id !== action.id) {
+					return rocket;
+				}
+				return { ...rocket, reserved: false };
 			});
 
 		default:

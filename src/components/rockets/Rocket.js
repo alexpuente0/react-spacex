@@ -1,13 +1,20 @@
 /* eslint-disable */
 import React from "react";
 import { useDispatch } from "react-redux";
-import { reserveRocket } from "../../redux/rockets/RocketReducer";
+import {
+	reserveRocket,
+	removeReservation,
+} from "../../redux/rockets/RocketReducer";
 
 const Rocket = ({ id, image, name, description, reserved }) => {
 	const dispatch = useDispatch();
 
 	const reserveShip = () => {
 		dispatch(reserveRocket(id));
+	};
+
+	const cancelReservation = () => {
+		dispatch(removeReservation(id));
 	};
 
 	return (
@@ -20,7 +27,11 @@ const Rocket = ({ id, image, name, description, reserved }) => {
 					{description}
 				</p>
 
-				<button className="cancel-btn" type="button">
+				<button
+					className="cancel-btn"
+					type="button"
+					onClick={cancelReservation}
+				>
 					Cancel Reservation
 				</button>
 
