@@ -23,21 +23,23 @@ const Rocket = ({ id, image, name, description, reserved }) => {
 			<div>
 				<h2 className="name">{name}</h2>
 				<p className="description">
-					<span className="span">Reserved</span>
+					{reserved && <span className="span">Reserved</span>}
 					{description}
 				</p>
-
-				<button
-					className="cancel-btn"
-					type="button"
-					onClick={cancelReservation}
-				>
-					Cancel Reservation
-				</button>
-
-				<button className="reserve-btn" type="button" onClick={reserveShip}>
-					Reserve Rocket
-				</button>
+				{reserved && (
+					<button
+						className="cancel-btn"
+						type="button"
+						onClick={cancelReservation}
+					>
+						Cancel Reservation
+					</button>
+				)}
+				{!reserved && (
+					<button className="reserve-btn" type="button" onClick={reserveShip}>
+						Reserve Rocket
+					</button>
+				)}
 			</div>
 		</div>
 	);
