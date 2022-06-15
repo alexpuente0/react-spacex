@@ -1,7 +1,15 @@
 /* eslint-disable */
 import React from "react";
+import { useDispatch } from "react-redux";
+import { reserveRocket } from "../../redux/rockets/RocketReducer";
 
 const Rocket = ({ id, image, name, description, reserved }) => {
+	const dispatch = useDispatch();
+
+	const reserveShip = () => {
+		dispatch(reserveRocket(id));
+	};
+
 	return (
 		<div className="rocket-container" id={id}>
 			<img src={image} alt="rocket" className="rocket-image" />
@@ -16,7 +24,7 @@ const Rocket = ({ id, image, name, description, reserved }) => {
 					Cancel Reservation
 				</button>
 
-				<button className="reserve-btn" type="button">
+				<button className="reserve-btn" type="button" onClick={reserveShip}>
 					Reserve Rocket
 				</button>
 			</div>
