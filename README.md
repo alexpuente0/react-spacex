@@ -5,8 +5,12 @@
 > This project its a Single Page Application to keep track of Reservations of Ships and Missions using the SpaceX API.
 
 ## Built With
-
+- CSS
+- JavaScript
 - React
+- React Router
+- React Toastify
+- Redux
 
 ## Getting Started
 
@@ -41,9 +45,9 @@ Coming Soon
 
 👤 **Fernando Salas**
 
-- GitHub: [@alexpuente0](https://github.com/alexpuente0)
-- Twitter: [@zero_rock](https://twitter.com/zero_rock)
-- LinkedIn: [Alejandro Puente](https://www.linkedin.com/in/alejandro-puente-farías-154a7629/)
+- GitHub: [@LuisSalas94](https://github.com/LuisSalas94)
+- Twitter: [@LuisSalas94](https://twitter.com/FernandoSalasD4)
+- LinkedIn: [Fernando Salas](https://www.linkedin.com/in/luisfernandosalasgave/)
 
 ## 🤝 Contributing
 
