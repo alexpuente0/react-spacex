@@ -31,7 +31,7 @@ const Header = () => {
               className="rockets"
               style={({ isActive }) => (isActive ? activeStyle : undefined)}
             >
-              Rockes
+              Rockets
             </NavLink>
           </li>
           <li>
