@@ -18,7 +18,7 @@ In this project are creating a SPA using React
 
 ## Live Demo
 
-Coming Soon
+Check out the live project [here](https://spacex-app-react.netlify.app)
 
 ## Installation
 
