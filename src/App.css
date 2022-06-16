@@ -1,0 +1,254 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #333;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  transition: all 0.2s linear;
+}
+
+:root {
+  --blue: #0290ff;
+  --blue2: #0150ff;
+  --gray: #ddd;
+  --turquoise: #00cbb9;
+  --white: #fff;
+  --white-2: #f2f2f2;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 5%;
+  align-items: center;
+}
+
+.title-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.title-container .logo {
+  width: 3rem;
+  cursor: pointer;
+  animation: float 2.5s linear infinite;
+  margin-right: 0.2rem;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(1rem);
+  }
+}
+
+.list-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.list-container a {
+  color: var(--blue);
+}
+
+.list-container .profile {
+  border-left: 1px solid #333;
+  padding-left: 1rem;
+}
+
+.line {
+  margin: 0 1.5rem;
+}
+
+/* Rocket Styling */
+.rocket-container {
+  display: flex;
+  margin: 2rem;
+}
+
+.rocket-container .rocket-image {
+  display: block;
+  width: 18rem;
+  margin-right: 1rem;
+}
+
+.rocket-container .name,
+.rocket-container .description {
+  margin: 0 1rem;
+}
+
+.rocket-container .reserve-btn {
+  margin: 0.5rem 0;
+  background-color: var(--blue);
+  color: var(--white);
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+}
+
+.rocket-container .reserve-btn:hover {
+  background-color: var(--blue2);
+}
+
+.rocket-container .cancel-btn {
+  margin-left: 1rem;
+  margin-top: 0.5rem;
+  background-color: var(--white);
+  color: gray;
+  border: 1px solid #333;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  font-size: 15px;
+}
+
+.rocket-container .cancel-btn:hover {
+  background-color: var(--gray);
+  color: var(--white);
+}
+
+.rocket-container .span {
+  background-color: var(--turquoise);
+  color: var(--white);
+  border-radius: 6px;
+  padding: 0.1rem 0.5rem;
+  margin-right: 0.5rem;
+}
+
+/* Mission Styling */
+
+tr {
+  cursor: pointer;
+}
+
+.missions-container {
+  margin: 1rem 2rem;
+  border-collapse: collapse;
+}
+
+.missions-container tr {
+  transition: all 0.3s ease-in-out;
+}
+
+.mission-container .mission-name {
+  font-weight: bold;
+}
+
+.missions-container tr:nth-child(odd) {
+  background-color: var(--white-2);
+}
+
+.missions-container tr:hover {
+  background-color: #ddd;
+}
+
+.missions-container th,
+.missions-container td {
+  border: 1px solid rgb(196, 195, 195);
+  padding: 0.8rem;
+}
+
+.missions-container th {
+  background-color: var(--white);
+}
+
+.mission-container .active-member {
+  background-color: rgb(27, 163, 151);
+  color: var(--white);
+  padding: 0.15rem;
+  border-radius: 0.2rem;
+  display: block;
+  margin: auto;
+  width: 65%;
+  text-align: center;
+}
+
+.mission-container .not-member {
+  background-color: rgb(102, 104, 104);
+  color: var(--white);
+  padding: 0.15rem;
+  border-radius: 0.2rem;
+  display: block;
+  margin: auto;
+  width: 70%;
+  text-align: center;
+}
+
+/* Profile Styling */
+.profile-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.profile-container .rockets-profile {
+  width: 40%;
+  margin: 2rem;
+}
+
+.profile-container .title {
+  padding: 1rem;
+}
+
+.profile-container .rockets {
+  border: 1px solid var(--gray);
+  border-radius: 5px;
+}
+
+.profile-container .rockets-li {
+  padding: 1rem;
+  border-bottom: 1px solid var(--gray);
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .title-container .header {
+    font-size: 28px;
+  }
+
+  .list-container {
+    margin-top: 1.5rem;
+  }
+
+  .list-container a {
+    font-size: 18px;
+  }
+
+  .rocket-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .rocket-container .rocket-image {
+    width: 23rem;
+  }
+
+  .rocket-container .content {
+    text-align: center;
+  }
+
+  .rocket-container .name {
+    margin-top: 0.5rem;
+  }
+}
