@@ -1,15 +1,14 @@
-/* eslint-disable */
 // Action Types
-const FETCH_MISSION = "FETCH_MISSION";
-const JOIN = "JOIN";
+const FETCH_MISSION = 'FETCH_MISSION';
+const JOIN = 'JOIN';
 
 // URL
-const URL = "https://api.spacexdata.com/v3/missions";
+const URL = 'https://api.spacexdata.com/v3/missions';
 
-//Action Creators
+// Action Creators
 export const joinMission = (id) => ({
-	type: JOIN,
-	payload: id,
+  type: JOIN,
+  payload: id,
 });
 
 // Asinc Thunk Function
@@ -48,7 +47,7 @@ export const missionReducer = (state = initialState, action = {}) => {
       });
       return newState;
     }
-    
+
     case FETCH_MISSION:
       return action.payload;
     default:
