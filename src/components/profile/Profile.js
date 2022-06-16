@@ -1,18 +1,17 @@
-/* eslint-disable */
-import React from "react";
-import MissionProfile from "./MissionProfile";
-import { useSelector } from "react-redux";
+import React from 'react';
+import { useSelector } from 'react-redux';
+import MissionProfile from './MissionProfile';
 
 const Profile = () => {
-	const rocketState = useSelector((state) => state.rocketsReducer);
-	const reservedRockets = rocketState.filter((item) => item.reserved === true);
+  const rocketState = useSelector((state) => state.rocketsReducer);
+  const reservedRockets = rocketState.filter((item) => item.reserved === true);
 
   const missionState = useSelector((state) => state.missionReducer);
   const reservedMissions = missionState.filter(
-    (item) => item.reserved === true
- );
+    (item) => item.reserved === true,
+  );
 
-	return (
+  return (
     <div className="profile-container">
       <div className="rockets-profile">
         <h2 className="title">My Missions</h2>
